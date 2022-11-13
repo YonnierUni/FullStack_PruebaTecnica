@@ -27,17 +27,14 @@ const TableProducts = ({
   const { currentUser } = useContext(appContext);
 
   const cargarCantidadProductosPaginado = async () => {
-    const respons = await fetch(`${baseUrl}/producto/countProductos`, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
+    const respons = await axios
+      .get(`${baseUrl}/producto/countProductos/`)
       .then((res) => {
-        return res.json();
+        return res.data;
       })
       .then((data) => {
+        console.log("data")
+        console.log(data)
         setCantidadElementos(data.cantidadProductos);
       })
       .catch((error) => {
@@ -62,13 +59,12 @@ const TableProducts = ({
         console.log("Productoss");
         console.log(text);
         setProductos(text);
-        setConta(conta + 1);
       })
       .catch((error) => {
         console.log(error);
       });
   };
-  
+
   const cargarProducto = async (idProducto) => {
     console.log(idProducto);
     const respons = await fetch(
@@ -116,7 +112,7 @@ const TableProducts = ({
   useEffect(() => {
     cargarProductos(currentPage, itemsPerPage);
     console.log(currentPage + " - " + itemsPerPage);
-  }, [currentPage]);
+  }, [currentPage, conta]);
 
   useEffect(() => {
     console.log(cantidadElementos);
