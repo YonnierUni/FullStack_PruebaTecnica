@@ -28,30 +28,27 @@ const NavBar = () => {
             <Link to={"/login"}> Login</Link>
           </li>
         )}
-
         <li className={styles.navBar__rightItems__subMenu}>
-          <span>{datosUsuario?.nombres}</span>
-          <ul>
-            {datosUsuario?.rol?.id == 1 ? (
-              <li>
-                <Link to={"/gestionarProductos"}>Gestionar Productos</Link>
-              </li>
-            ) : (
-              <></>
-            )}
-          </ul>
-        </li>
-        <li>
+          {" "}
           {currentUser ? (
-            <></>
+            <>
+              <span>{datosUsuario?.nombres}</span>
+              <ul>
+                {datosUsuario?.rol?.id == 1 ? (
+                  <li>
+                    <Link to={"/gestionarProductos"}>Gestionar Productos</Link>
+                  </li>
+                ) : (
+                  <></>
+                )}
+              </ul>
+            </>
           ) : (
-            <li>
-              <Link to={"/register"}> Crear usuario</Link>
-            </li>
+            <Link to={"/register"}> Crear usuario</Link>
           )}
         </li>
-        <li>
-          {currentUser ? (
+        {currentUser ? (
+          <li>
             <span
               onClick={() => {
                 logOut();
@@ -62,10 +59,10 @@ const NavBar = () => {
             >
               Cerrar sesion
             </span>
-          ) : (
-            <></>
-          )}
-        </li>
+          </li>
+        ) : (
+          <></>
+        )}
       </ul>
     </div>
   );
