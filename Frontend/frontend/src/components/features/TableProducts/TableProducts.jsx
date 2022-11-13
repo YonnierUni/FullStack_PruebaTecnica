@@ -33,8 +33,8 @@ const TableProducts = ({
         return res.data;
       })
       .then((data) => {
-        console.log("data")
-        console.log(data)
+        console.log("data");
+        console.log(data);
         setCantidadElementos(data.cantidadProductos);
       })
       .catch((error) => {
@@ -67,27 +67,27 @@ const TableProducts = ({
 
   const cargarProducto = async (idProducto) => {
     console.log(idProducto);
-    const respons = await fetch(
-      `${baseUrl}/producto/getProducto/${idProducto}`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    const data = await respons.json();
-    console.log(data);
-    setProducto({
-      ...producto,
-      id: data.id,
-      nombre: data.nombre,
-      rubro: data.rubro,
-      marca: data.marca,
-      proveedor: data.proveedor,
-      precio: data.precio,
-    });
+    const respons = await axios
+      .get(`${baseUrl}/producto/getProducto/${idProducto}`)
+      .then((res) => {
+        return res.data;
+      })
+      .then((data) => {
+        console.log("datacargar");
+        console.log(data);
+        setProducto({
+          ...producto,
+          id: data.id,
+          nombre: data.nombre,
+          rubro: data.rubro,
+          marca: data.marca,
+          proveedor: data.proveedor,
+          precio: data.precio,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   const eliminarProducto = async (idProducto) => {
     axios

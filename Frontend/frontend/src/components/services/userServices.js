@@ -1,5 +1,6 @@
-import { createContext, useEffect, useState, useContext } from "react";
 import React from "react";
+import { appContext } from "../../App";
+
 
 export const checkUserRol = () => {
   const userData = JSON.parse(localStorage.getItem("token"));

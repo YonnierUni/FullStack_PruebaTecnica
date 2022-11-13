@@ -55,6 +55,7 @@ function App() {
         <Routes>
           <Route element={<Home />} path={"/"}></Route>
           <Route element={<Home />} path={"/home"}></Route>
+          <Route element={<AdminRoutes />}>
             <Route
               element={
                 <MainSection>
@@ -63,6 +64,7 @@ function App() {
               }
               path={"/gestionarProductos"}
             ></Route>
+          </Route>
           <Route
             element={
               <MainSection>

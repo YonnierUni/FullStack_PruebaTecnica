@@ -75,3 +75,15 @@
     transition: 0.2s;
 
 }
+
+@media screen and (max-width: 1100px) {
+    .navBar__leftItems {
+
+        padding-left:0rem;
+    }
+    .navBar__rightItems{
+        padding-left: 0rem;
+
+    }
+
+}

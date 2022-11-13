@@ -41,4 +41,4 @@ const jwt = require("jsonwebtoken");
   }
 }
 
-module.exports = {checkIfSuperAdmin,checkIfAdmin,checkIfUser}
+module.exports = {checkIfAdmin,checkIfUser}

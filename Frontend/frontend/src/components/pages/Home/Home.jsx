@@ -73,7 +73,7 @@ const Home = ({}) => {
     <div className={styles.home}>
       <div className={styles.contenedor}>
         <img src={image}></img>
-        <h1 className={styles.centrado}>Prueba Tecnica Home</h1>
+        <h1 className={styles.centrado}>Prueba Tecnica</h1>
       </div>
 
       <div className={styles.grid}>
@@ -85,7 +85,7 @@ const Home = ({}) => {
                 nombre={product.nombre}
                 rubro={product.rubro}
                 marca={product.marca}
-                proveedor={product.roveedor}
+                proveedor={product.proveedor}
                 precio={product.precio}
               ></CardProducto>
             </div>

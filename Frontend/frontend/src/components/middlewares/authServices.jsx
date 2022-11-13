@@ -2,8 +2,9 @@ import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { checkUserRol } from "../services/userServices";
 
-const AdminRoles = ["User", "Admin"];
-const userRoles = ["User"];
+const AdminRoles = ["admin"];
+const userRoles = ["user"];
+
 
 export const AdminRoutes = () => {
   const navigate = useNavigate();

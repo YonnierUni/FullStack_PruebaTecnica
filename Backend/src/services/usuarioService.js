@@ -49,6 +49,7 @@ async function loginUser(req, res) {
       ? jwt.sign({ token: aux }, tokenKey, (err, token) => {
           res.send({
             token,
+            rol: aux.rol,
           });
         })
       : res.send({ ms: "No se encontró el usuario" });
@@ -63,7 +64,7 @@ async function getUser(req, res) {
     console.log(tokenA);
 
     let aux = jwt.decode(tokenA, tokenKey);
-
+    console.log(aux);
     if (aux == null) {
       res.send({ ms: "No se encontró el usuario" });
     } else {

@@ -32,7 +32,7 @@ const NavBar = () => {
         <li className={styles.navBar__rightItems__subMenu}>
           <span>{datosUsuario?.nombres}</span>
           <ul>
-            {currentUser ? (
+            {datosUsuario?.rol?.id == 1 ? (
               <li>
                 <Link to={"/gestionarProductos"}>Gestionar Productos</Link>
               </li>
