@@ -1,0 +1,100 @@
+.form {
+    width: 50%;
+    -webkit-box-shadow: 0px 0px 10px 0px #000000;
+    box-shadow: 0px 0px 10px 0px #000000;
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--text-color1);
+    background: var(--bacgroung-gradient1);
+    border-radius: 20px;
+
+}
+
+.form__emailContainer {
+    text-align: start;
+    margin: 5px;
+}
+
+.form__emailContainer div input {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.form__passwordContainer {
+    text-align: start;
+    margin: 5px;
+}
+
+.form__passwordContainer div input {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.form__passwordContainer div button {
+    border: none;
+    background: none;
+    margin-left: -30px;
+}
+
+.form__passwordContainer div button:hover {
+    color: var(--background-color3);
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+
+.form__passwordContainer div button svg {
+    cursor: pointer;
+    vertical-align: middle;
+    width: 100%;
+
+}
+
+.form__submit {
+    display: block;
+    margin: auto;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    background: var(--bacgroung-gradient2);
+    color: var(--text-color1);
+    cursor: pointer;
+    border: none;
+    border: 2px solid var(--background-color3);
+
+}
+
+.form__submit:hover {
+    background: var(--bacgroung-gradient1);
+    color: var(--background-color3);
+    border: 2px solid var(--background-color3);
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+.form__signup {
+    display: block;
+    font-size: var(--text-parrafo);
+    cursor: pointer;
+}
+
+.form__signup:hover {
+    color: var(--background-color3);
+    transition: 0.2s;
+}
+
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 80%;
+    }
+
+    .form div {
+        display: block;
+        text-align: left;
+    }
+
+
+}

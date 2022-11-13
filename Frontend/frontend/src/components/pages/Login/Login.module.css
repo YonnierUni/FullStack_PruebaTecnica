@@ -1,0 +1,13 @@
+.Login {
+    text-align: center;
+}
+
+.subTitle {
+    font-size: var(--text-titulo);
+    padding: 5% 0px 5% 0px;
+}
+
+.Login>* {
+    margin: auto;
+    text-align: center;
+}

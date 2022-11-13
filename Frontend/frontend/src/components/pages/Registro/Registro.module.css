@@ -1,0 +1,14 @@
+.registro {
+    text-align: center;
+    height: 100%;
+}
+
+.subTitle {
+    font-size: var(--text-titulo);
+    padding: 5% 0px 5% 0px;
+}
+
+.registro>* {
+    margin: auto;
+    text-align: center;
+}

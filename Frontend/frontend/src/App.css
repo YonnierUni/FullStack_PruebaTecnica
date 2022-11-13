@@ -1,0 +1,24 @@
+:root {
+    --background-color1: #1A1E21;
+    --background-color2: #262A2E;
+    --background-color3: #BF8136;
+    --bacgroung-gradient1: linear-gradient(45deg, rgba(26, 30, 33, 1) 20%, rgba(38, 42, 32, 1) 40%, rgba(26, 30, 33, 1) 60%, rgba(38, 42, 32, 1) 80%, rgba(26, 30, 33, 1) 100%);
+    --bacgroung-gradient2: linear-gradient(45deg, rgba(191, 129, 54, 1) 20%, rgba(199, 142, 72, 1) 40%, rgba(191, 129, 54, 1) 60%, rgba(199, 142, 72, 1) 80%, rgba(191, 129, 54, 1) 100%);
+    /*text colors*/
+    --text-color1: #ffffff;
+    --text-color2: #1A1E21;
+    /*border colors*/
+    --border-color1: #d3d3d3;
+    --text-titulo: 28px;
+    --text-subTitulo: 24px;
+    --text-parrafo: 20px;
+}
+
+.footer {
+    --background-color1: #363839;
+    height: 500px;
+}
+
+.leaflet-container {
+    height: 50vh;
+}

@@ -1,0 +1,66 @@
+.dialogContainer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+}
+
+.dialog{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #20202071;
+}
+
+.dialogForm{
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #e9e9e9;
+    max-width: 600px;
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 0 0 3px 1px #000000;
+    text-align: center;
+  word-wrap: break-word; 
+}
+.dialogForm p{
+    margin-bottom: 20px;
+}
+
+.flex__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.flex__buttons button{
+    width: 30%;
+    padding: 10px 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s transform     ;
+}
+.flex__buttons button:hover{
+    transform: scale(1.05);
+}
+
+.confirm{
+    background-color: #5cdb5c;
+    color:#fff;
+
+    border: none;
+}
+
+.cancel{
+    background-color: #ff0021;
+    color:#fff;
+    border: none;
+    
+}

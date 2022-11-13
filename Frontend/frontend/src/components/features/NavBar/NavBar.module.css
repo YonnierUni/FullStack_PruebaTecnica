@@ -1,0 +1,75 @@
+.navBar {
+    display: flex;
+    background: var(--bacgroung-gradient1);
+    width: 100%;
+    align-items: center;
+    color: var(--text-color1)
+}
+
+
+.navBar__leftItems {
+    display: flex;
+    position: sticky;
+    vertical-align: middle;
+    justify-content: start;
+    padding-left: 1.3rem;
+}
+
+.navBar__rightItems {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1.3rem;
+}
+
+.navBar__leftItems :hover {
+    background: var(--bacgroung-gradient2);
+}
+
+.navBar__leftItems * {
+    padding: 0px 0px;
+}
+
+.navBar__rightItems>*,
+.navBar__leftItems>* {
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.navBar__rightItems__subMenu {
+    position: relative;
+}
+
+.navBar__rightItems li:hover {
+    background: var(--bacgroung-gradient2);
+    transition: 0.2s;
+}
+
+.navBar__rightItems li:hover>ul {
+    display: block;
+}
+
+.navBar__rightItems__subMenu ul {
+    position: absolute;
+    display: none;
+    top: 42px;
+    left: 0px;
+    text-align: center;
+    background: var(--bacgroung-gradient1);
+    box-shadow: 0px 0px 3px 0px #000000;
+    font-size: var(--text-parrafo);
+}
+
+.navBar__rightItems__subMenu ul li {
+    border-bottom: 1px solid var(--background-color2);
+    padding: 8px 10px;
+    min-width: 150px;
+    transition: 0.2s;
+}
+
+.navBar__rightItems__subMenu ul li:hover {
+    background: var(--bacgroung-gradient2);
+    transition: 0.2s;
+
+}

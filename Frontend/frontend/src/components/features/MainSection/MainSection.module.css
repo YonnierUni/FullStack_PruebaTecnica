@@ -1,0 +1,11 @@
+.mainSection {
+  margin: 0px 5%;
+
+  /*prube*/
+}
+
+@media (max-width: 700px) {
+  .mainSection {
+    padding: 30px 5%;
+  }
+}
