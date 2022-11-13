@@ -7,10 +7,9 @@ const CardProducto = ({ id, nombre, rubro, marca, proveedor, precio }) => {
       <div className={styles.contenedor_hijo_interno}>
         <p className={styles.Title_2}>{nombre}</p>
         <p className={styles.subTitle_1}>{rubro}</p>
-        <p className={styles.subTitle_2}>{rubro}</p>
-        <p className={styles.subTitle_3}>{marca}</p>
-        <p className={styles.p}>{proveedor}</p>
-        <p className={styles.p}>{precio}</p>{" "}
+        <p className={styles.subTitle_2}>{marca}</p>
+        <p className={styles.subTitle_3}>{proveedor}</p>
+        <p className={styles.p}>{precio}</p>
         <div>
           <img src={""} />
         </div>

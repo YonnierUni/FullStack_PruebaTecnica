@@ -15,14 +15,18 @@ async function getProducto(idProducto) {
   return producto;
 }
 
+async function getCountProductos() {
+  const productos = await productoModel.count();
+  return productos;
+}
 async function getAllProductos() {
   const productos = await productoModel.findAll();
   return productos;
 }
 
 async function updateProducto(producto) {
-  console.log("producto")
-  console.log(producto)
+  console.log("producto");
+  console.log(producto);
   let newProducto = await productoModel.update(
     {
       nombre: producto.nombre,
@@ -53,6 +57,7 @@ async function nPaginadoProductos(datos) {
   return prods;
 }
 const productoDao = {
+  getCountProductos,
   createProducto,
   getProducto,
   getAllProductos,

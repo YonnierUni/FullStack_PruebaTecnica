@@ -123,17 +123,20 @@ async function deleteProducto(req, res) {
 }
 async function countProductos(req, res) {
   try {
-    aux = await productoDao.getAllProductos();
-    res.send({ cantidadProductos: aux.length });
+    aux = await productoDao.getCountProductos();
+    console.log(aux);
+    res.send({ cantidadProductos: aux });
   } catch (error) {
     res.send({ error: error });
   }
 }
 async function nPaginadoProductos(req, res) {
   try {
+    console.log("req.body.consul");
+    console.log(req.body.consul);
     let aux = {
-      currentPage: req.body.currentPage,
-      itemsPerPage: req.body.itemsPerPage,
+      currentPage: req.body.consul.currentPage,
+      itemsPerPage: req.body.consul.itemsPerPage,
     };
     if (aux.currentPage != null && aux.itemsPerPage != null) {
       aux = await productoDao.nPaginadoProductos(aux);

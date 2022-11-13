@@ -67,8 +67,6 @@ async function getUser(req, res) {
     if (aux == null) {
       res.send({ ms: "No se encontró el usuario" });
     } else {
-      console.log("aux");
-      console.log(aux.token);
       res.send(aux.token);
     }
   } catch (error) {
