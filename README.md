@@ -2,7 +2,9 @@
  
 npm i
 Para ejecutar, solo es necesario crear la base de datos llamada "pruebatecnicadb"
+
 insertar los datos
+
 insert into `productos` (`id`, `nombre`, `rubro`, `marca`, `proveedor`, `precio`, `createdAt`, `updatedAt`) VALUES ('2','ACEITE DE GIRASOL BOTELLA DE PLASTICO - 900 CC','ALMACÉN','ZANONI','AFA','652','2022-11-1  12:47:30','2022-11-12 12:47:31');
 insert into `productos` (`id`, `nombre`, `rubro`, `marca`, `proveedor`, `precio`, `createdAt`, `updatedAt`) VALUES ('3','ACEITE DE GIRASOL BOTELLA DE PLASTICO - 900 CC','ALMACÉN','NATURA','AGD','76','2022-11-1  12:47:30','2022-11-12 12:47:31');
 insert into `productos` (`id`, `nombre`, `rubro`, `marca`, `proveedor`, `precio`, `createdAt`, `updatedAt`) VALUES ('1','ACEITE DE GIRASOL BOTELLA DE PLASTICO - 1500 CC','ALMACÉN','ZANONI','AFA','1085','2022-11-1  12:47:30','2022-11-12 12:47:31');
