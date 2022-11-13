@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CardProducto.module.css";
 
+import { GoFileSubmodule } from "react-icons/go";
 const CardProducto = ({ id, nombre, rubro, marca, proveedor, precio }) => {
   return (
     <div className={styles.contenedor_hijo}>
@@ -11,7 +12,7 @@ const CardProducto = ({ id, nombre, rubro, marca, proveedor, precio }) => {
         <p className={styles.subTitle_3}>{proveedor}</p>
         <p className={styles.p}>{precio}</p>
         <div>
-          <img src={""} />
+          <GoFileSubmodule className={styles.icon}/>
         </div>
       </div>
       {/** <button

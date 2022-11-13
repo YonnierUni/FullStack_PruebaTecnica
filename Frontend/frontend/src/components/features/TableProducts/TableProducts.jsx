@@ -51,19 +51,24 @@ const TableProducts = ({
       itemsPerPage,
     };
 
-    const respons = await fetch(`${baseUrl}/producto/nPaginadoProductos`, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(consul),
-    });
-    const Productoss = await respons.json();
-    console.log(Productoss);
-    console.log("Productoss");
-    setProductos(Productoss);
+    const respons = await axios
+      .post(`${baseUrl}/producto/nPaginadoProductos/`, {
+        consul,
+      })
+      .then(function (res) {
+        return res.data;
+      })
+      .then(function (text) {
+        console.log("Productoss");
+        console.log(text);
+        setProductos(text);
+        setConta(conta + 1);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+  
   const cargarProducto = async (idProducto) => {
     console.log(idProducto);
     const respons = await fetch(
@@ -111,7 +116,7 @@ const TableProducts = ({
   useEffect(() => {
     cargarProductos(currentPage, itemsPerPage);
     console.log(currentPage + " - " + itemsPerPage);
-  }, [currentPage, conta]);
+  }, [currentPage]);
 
   useEffect(() => {
     console.log(cantidadElementos);

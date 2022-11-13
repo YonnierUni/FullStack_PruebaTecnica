@@ -1,6 +1,7 @@
 .pages {
-  margin:10px  0 ;
-}
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;}
 
 .pages button {
   color: rgb(26, 53, 53);

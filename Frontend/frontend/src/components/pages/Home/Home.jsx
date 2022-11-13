@@ -6,7 +6,7 @@ import Paginado from "../../features/Paginado/Paginado";
 import CardProducto from "../../features/CardProducto/CardProducto";
 import axios from "axios";
 import { baseUrl } from "../../../App";
-
+import image from "../../../assets/PruebaTecnica.jpg";
 const Home = ({}) => {
   const [cantidadElementos, setCantidadElementos] = useState(0);
   const [productos, setProductos] = useState([]);
@@ -71,7 +71,10 @@ const Home = ({}) => {
   }, [cantidadElementos]);
   return (
     <div className={styles.home}>
-      <h4>Home</h4>
+      <div className={styles.contenedor}>
+        <img src={image}></img>
+        <h1 className={styles.centrado}>Prueba Tecnica Home</h1>
+      </div>
 
       <div className={styles.grid}>
         {productos.map((product, idx) => {

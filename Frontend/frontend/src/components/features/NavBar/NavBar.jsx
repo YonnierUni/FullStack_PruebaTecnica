@@ -51,16 +51,20 @@ const NavBar = () => {
           )}
         </li>
         <li>
-          <span
-            onClick={() => {
-              logOut();
-              setCurrentUser(null);
-              setDatosUsuario(null);
-              navigate("/home");
-            }}
-          >
-            Cerrar sesion
-          </span>
+          {currentUser ? (
+            <span
+              onClick={() => {
+                logOut();
+                setCurrentUser(null);
+                setDatosUsuario(null);
+                navigate("/home");
+              }}
+            >
+              Cerrar sesion
+            </span>
+          ) : (
+            <></>
+          )}
         </li>
       </ul>
     </div>

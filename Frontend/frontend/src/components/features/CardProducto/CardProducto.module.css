@@ -9,8 +9,6 @@
     min-height: 400px;
     display: flex;
     flex-direction: column;
-    -webkit-box-shadow: 0px 0px 10px 0px #000000;
-    box-shadow: 0 0 7px 0 gray;
     background-color: #ffffff;
 
     padding: 15px 15px;
@@ -35,7 +33,7 @@
     text-align: left;
 }
 
-.contenedor_hijo_interno img {
+.contenedor_hijo_interno .icon {
     height: 300px;
     width: 100%;
     object-fit: cover;
